@@ -1,6 +1,6 @@
 ﻿namespace InventoryMgmtSoftware
 {
-    partial class Form4
+    partial class AttendantForm
     {
         /// <summary>
         /// Required designer variable.

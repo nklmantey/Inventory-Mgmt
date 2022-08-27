@@ -1,6 +1,6 @@
 ﻿namespace InventoryMgmtSoftware
 {
-    partial class Form3
+    partial class ProductForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button10 = new System.Windows.Forms.Button();
             this.Prod = new System.Windows.Forms.ComboBox();
@@ -49,7 +49,6 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
-            this.Dashboard = new System.Windows.Forms.Button();
             this.Products = new System.Windows.Forms.Button();
             this.Categories = new System.Windows.Forms.Button();
             this.Users = new System.Windows.Forms.Button();
@@ -58,7 +57,6 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Report = new System.Windows.Forms.Button();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.ProdData = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -68,7 +66,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProdData)).BeginInit();
             this.SuspendLayout();
@@ -143,6 +140,7 @@
             this.button9.TabIndex = 19;
             this.button9.Text = "Update";
             this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button8
             // 
@@ -351,19 +349,6 @@
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
-            // Dashboard
-            // 
-            this.Dashboard.FlatAppearance.BorderSize = 0;
-            this.Dashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Dashboard.Font = new System.Drawing.Font("JetBrains Mono SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Dashboard.Location = new System.Drawing.Point(66, 84);
-            this.Dashboard.Name = "Dashboard";
-            this.Dashboard.Size = new System.Drawing.Size(130, 40);
-            this.Dashboard.TabIndex = 0;
-            this.Dashboard.Text = "Dashboard";
-            this.Dashboard.UseVisualStyleBackColor = true;
-            this.Dashboard.Click += new System.EventHandler(this.button1_Click);
-            // 
             // Products
             // 
             this.Products.BackColor = System.Drawing.Color.MidnightBlue;
@@ -371,7 +356,7 @@
             this.Products.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Products.Font = new System.Drawing.Font("JetBrains Mono SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Products.ForeColor = System.Drawing.Color.White;
-            this.Products.Location = new System.Drawing.Point(66, 197);
+            this.Products.Location = new System.Drawing.Point(66, 126);
             this.Products.Name = "Products";
             this.Products.Size = new System.Drawing.Size(130, 40);
             this.Products.TabIndex = 1;
@@ -383,7 +368,7 @@
             this.Categories.FlatAppearance.BorderSize = 0;
             this.Categories.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Categories.Font = new System.Drawing.Font("JetBrains Mono SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Categories.Location = new System.Drawing.Point(66, 310);
+            this.Categories.Location = new System.Drawing.Point(66, 239);
             this.Categories.Name = "Categories";
             this.Categories.Size = new System.Drawing.Size(130, 40);
             this.Categories.TabIndex = 2;
@@ -396,7 +381,7 @@
             this.Users.FlatAppearance.BorderSize = 0;
             this.Users.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Users.Font = new System.Drawing.Font("JetBrains Mono SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Users.Location = new System.Drawing.Point(66, 649);
+            this.Users.Location = new System.Drawing.Point(66, 578);
             this.Users.Name = "Users";
             this.Users.Size = new System.Drawing.Size(130, 40);
             this.Users.TabIndex = 3;
@@ -409,7 +394,7 @@
             this.Stock.FlatAppearance.BorderSize = 0;
             this.Stock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Stock.Font = new System.Drawing.Font("JetBrains Mono SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Stock.Location = new System.Drawing.Point(66, 423);
+            this.Stock.Location = new System.Drawing.Point(66, 352);
             this.Stock.Name = "Stock";
             this.Stock.Size = new System.Drawing.Size(130, 40);
             this.Stock.TabIndex = 4;
@@ -419,7 +404,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = global::InventoryMgmtSoftware.Properties.Resources.user1;
-            this.pictureBox5.Location = new System.Drawing.Point(12, 639);
+            this.pictureBox5.Location = new System.Drawing.Point(12, 568);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(50, 50);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -429,7 +414,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::InventoryMgmtSoftware.Properties.Resources.in_stock;
-            this.pictureBox4.Location = new System.Drawing.Point(12, 413);
+            this.pictureBox4.Location = new System.Drawing.Point(12, 342);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(50, 50);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -439,7 +424,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::InventoryMgmtSoftware.Properties.Resources.apps;
-            this.pictureBox3.Location = new System.Drawing.Point(12, 300);
+            this.pictureBox3.Location = new System.Drawing.Point(12, 229);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(50, 50);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -449,30 +434,19 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::InventoryMgmtSoftware.Properties.Resources.products;
-            this.pictureBox2.Location = new System.Drawing.Point(12, 187);
+            this.pictureBox2.Location = new System.Drawing.Point(12, 116);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(50, 50);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 7;
             this.pictureBox2.TabStop = false;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::InventoryMgmtSoftware.Properties.Resources.monitor;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 74);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // Report
             // 
             this.Report.FlatAppearance.BorderSize = 0;
             this.Report.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Report.Font = new System.Drawing.Font("JetBrains Mono SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Report.Location = new System.Drawing.Point(68, 536);
+            this.Report.Location = new System.Drawing.Point(68, 465);
             this.Report.Name = "Report";
             this.Report.Size = new System.Drawing.Size(130, 40);
             this.Report.TabIndex = 14;
@@ -482,7 +456,7 @@
             // pictureBox7
             // 
             this.pictureBox7.Image = global::InventoryMgmtSoftware.Properties.Resources.report;
-            this.pictureBox7.Location = new System.Drawing.Point(12, 526);
+            this.pictureBox7.Location = new System.Drawing.Point(12, 455);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(50, 50);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -491,32 +465,33 @@
             // 
             // ProdData
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.ProdData.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightSkyBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ProdData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.ProdData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.MidnightBlue;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.ProdData.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.ProdData.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ProdData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.ProdData.ColumnHeadersHeight = 30;
+            this.ProdData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.ProdData.DefaultCellStyle = dataGridViewCellStyle6;
             this.ProdData.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.ProdData.Location = new System.Drawing.Point(542, 69);
+            this.ProdData.Location = new System.Drawing.Point(542, 70);
             this.ProdData.Name = "ProdData";
             this.ProdData.RowHeadersVisible = false;
             this.ProdData.RowHeadersWidth = 51;
-            this.ProdData.RowTemplate.Height = 24;
-            this.ProdData.Size = new System.Drawing.Size(691, 630);
+            this.ProdData.RowTemplate.Height = 30;
+            this.ProdData.Size = new System.Drawing.Size(691, 629);
             this.ProdData.TabIndex = 23;
             this.ProdData.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.ProdData.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -525,20 +500,21 @@
             this.ProdData.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
             this.ProdData.ThemeStyle.BackColor = System.Drawing.Color.White;
             this.ProdData.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.ProdData.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.ProdData.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.ProdData.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.ProdData.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProdData.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.Black;
-            this.ProdData.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ProdData.ThemeStyle.HeaderStyle.Height = 4;
+            this.ProdData.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProdData.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.ProdData.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.ProdData.ThemeStyle.HeaderStyle.Height = 30;
             this.ProdData.ThemeStyle.ReadOnly = false;
-            this.ProdData.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.Black;
+            this.ProdData.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.ProdData.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.ProdData.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProdData.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.White;
-            this.ProdData.ThemeStyle.RowsStyle.Height = 24;
-            this.ProdData.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.MidnightBlue;
-            this.ProdData.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.ProdData.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProdData.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.ProdData.ThemeStyle.RowsStyle.Height = 30;
+            this.ProdData.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.ProdData.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.ProdData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ProdData_CellContentClick);
             // 
             // Form3
             // 
@@ -552,12 +528,10 @@
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Stock);
             this.Controls.Add(this.Users);
             this.Controls.Add(this.Categories);
             this.Controls.Add(this.Products);
-            this.Controls.Add(this.Dashboard);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form3";
@@ -571,7 +545,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProdData)).EndInit();
             this.ResumeLayout(false);
@@ -582,12 +555,10 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button Dashboard;
         private System.Windows.Forms.Button Products;
         private System.Windows.Forms.Button Categories;
         private System.Windows.Forms.Button Users;
         private System.Windows.Forms.Button Stock;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;

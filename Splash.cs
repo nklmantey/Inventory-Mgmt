@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace InventoryMgmtSoftware
 {
-    public partial class Form1 : Form
+    public partial class Splash : Form
     {
-        public Form1()
+        public Splash()
         {
             InitializeComponent();
         }
@@ -26,7 +26,7 @@ namespace InventoryMgmtSoftware
             {
                 CircleLoad.Value = 0;
                 timer1.Stop();
-                Form2  log = new Form2();
+                LoginForm  log = new LoginForm();
                 this.Hide();
                 log.Show();
 
