@@ -31,5 +31,12 @@ namespace InventoryMgmtSoftware
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Att_TillForm log = new Att_TillForm();
+            this.Hide();
+            log.Show();
+        }
     }
 }

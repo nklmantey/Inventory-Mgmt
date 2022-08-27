@@ -31,13 +31,25 @@ namespace InventoryMgmtSoftware
             {
                 conn.Open();
                 string query = "insert into users values('" + UserName.Text + "', '" + UserPassword.Text + "', '" + Role.Text + "')";
-                SqlCommand command = new SqlCommand(query, conn);
-                command.ExecuteNonQuery();
-                MessageBox.Show("User added successfuly");
-                conn.Close();
-                LoginForm log = new LoginForm();
-                this.Hide();
-                log.Show();
+                if (Role.Text == "Admin")
+                {
+                    SqlCommand command = new SqlCommand(query, conn);
+                    command.ExecuteNonQuery();
+                    MessageBox.Show("User added successfuly");
+                    conn.Close();
+                    ProductForm log = new ProductForm();
+                    this.Hide();
+                    log.Show();
+                } else
+                {
+                    SqlCommand command = new SqlCommand(query, conn);
+                    command.ExecuteNonQuery();
+                    MessageBox.Show("User added successfuly");
+                    conn.Close();
+                    AttendantForm log = new AttendantForm();
+                    this.Hide();
+                    log.Show();
+                }
             }
             catch (Exception exception)
             {

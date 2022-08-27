@@ -126,5 +126,19 @@ namespace InventoryMgmtSoftware
                 MessageBox.Show(exception.Message);
             }
         }
+
+        private void Users_Click(object sender, EventArgs e)
+        {
+            UserForm log = new UserForm();
+            this.Hide();
+            log.Show();
+        }
+
+        private void Stock_Click(object sender, EventArgs e)
+        {
+            StockForm log = new StockForm();
+            this.Hide();
+            log.Show();
+        }
     }
 }

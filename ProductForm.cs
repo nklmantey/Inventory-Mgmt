@@ -31,7 +31,9 @@ namespace InventoryMgmtSoftware
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            UserForm log = new UserForm();
+            this.Hide();
+            log.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -55,7 +57,7 @@ namespace InventoryMgmtSoftware
                 string query = "insert into products values(" + ProdID.Text + ", '" + ProdName.Text + "', '" + ProdPrice.Text + "', '" + ProdQty.Text + "', '" + ProdCategory.Text + "')";
                 SqlCommand command = new SqlCommand(query, conn);
                 command.ExecuteNonQuery();
-                MessageBox.Show("Product added successfuly");
+                MessageBox.Show("Product added successfully");
                 conn.Close();
             }
             catch (Exception exception)
@@ -156,6 +158,13 @@ namespace InventoryMgmtSoftware
             {
                 MessageBox.Show(exception.Message);
             }
+        }
+
+        private void Stock_Click(object sender, EventArgs e)
+        {
+            StockForm log = new StockForm();
+            this.Hide();
+            log.Show();
         }
     }
 }

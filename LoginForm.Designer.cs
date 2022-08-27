@@ -37,6 +37,7 @@
             this.Login = new Bunifu.Framework.UI.BunifuThinButton2();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.Signup = new Bunifu.Framework.UI.BunifuThinButton2();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -96,7 +97,7 @@
             this.UserPassword.ForeColor = System.Drawing.Color.White;
             this.UserPassword.HintForeColor = System.Drawing.Color.White;
             this.UserPassword.HintText = "";
-            this.UserPassword.isPassword = false;
+            this.UserPassword.isPassword = true;
             this.UserPassword.LineFocusedColor = System.Drawing.Color.DodgerBlue;
             this.UserPassword.LineIdleColor = System.Drawing.Color.White;
             this.UserPassword.LineMouseHoverColor = System.Drawing.Color.DodgerBlue;
@@ -141,7 +142,7 @@
             this.Login.IdleFillColor = System.Drawing.Color.White;
             this.Login.IdleForecolor = System.Drawing.Color.MidnightBlue;
             this.Login.IdleLineColor = System.Drawing.Color.White;
-            this.Login.Location = new System.Drawing.Point(642, 434);
+            this.Login.Location = new System.Drawing.Point(576, 434);
             this.Login.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Login.Name = "Login";
             this.Login.Size = new System.Drawing.Size(150, 66);
@@ -169,22 +170,49 @@
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
             // 
+            // Signup
+            // 
+            this.Signup.ActiveBorderThickness = 1;
+            this.Signup.ActiveCornerRadius = 20;
+            this.Signup.ActiveFillColor = System.Drawing.Color.DodgerBlue;
+            this.Signup.ActiveForecolor = System.Drawing.Color.White;
+            this.Signup.ActiveLineColor = System.Drawing.Color.DodgerBlue;
+            this.Signup.BackColor = System.Drawing.Color.MidnightBlue;
+            this.Signup.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Signup.BackgroundImage")));
+            this.Signup.ButtonText = "Signup";
+            this.Signup.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Signup.Font = new System.Drawing.Font("JetBrains Mono SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Signup.ForeColor = System.Drawing.Color.White;
+            this.Signup.IdleBorderThickness = 1;
+            this.Signup.IdleCornerRadius = 20;
+            this.Signup.IdleFillColor = System.Drawing.Color.White;
+            this.Signup.IdleForecolor = System.Drawing.Color.MidnightBlue;
+            this.Signup.IdleLineColor = System.Drawing.Color.White;
+            this.Signup.Location = new System.Drawing.Point(737, 434);
+            this.Signup.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.Signup.Name = "Signup";
+            this.Signup.Size = new System.Drawing.Size(150, 66);
+            this.Signup.TabIndex = 9;
+            this.Signup.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Signup.Click += new System.EventHandler(this.Signup_Click);
+            // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::InventoryMgmtSoftware.Properties.Resources._20946011;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(-3, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(500, 500);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
             // 
-            // Form2
+            // LoginForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.MidnightBlue;
             this.ClientSize = new System.Drawing.Size(900, 500);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.Signup);
             this.Controls.Add(this.Login);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.UserPassword);
@@ -193,9 +221,8 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.Role);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form2";
+            this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -207,8 +234,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox Role;
         private System.Windows.Forms.PictureBox pictureBox2;
@@ -217,5 +242,7 @@
         private Bunifu.Framework.UI.BunifuMaterialTextbox UserPassword;
         private System.Windows.Forms.Button button6;
         private Bunifu.Framework.UI.BunifuThinButton2 Login;
+        private Bunifu.Framework.UI.BunifuThinButton2 Signup;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

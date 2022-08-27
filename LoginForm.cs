@@ -31,8 +31,8 @@ namespace InventoryMgmtSoftware
 
             try
             {
-                string query1 = "select * from users where UserName = '" + UserName.Text + "' AND UserPassword = '" + UserPassword.Text + "' AND UserRole = '" + Role.Text + "'";
-                SqlDataAdapter sda = new SqlDataAdapter(query1, conn);
+                string query = "select * from users where UserName = '" + UserName.Text + "' AND UserPassword = '" + UserPassword.Text + "' AND UserRole = '" + Role.Text + "'";
+                SqlDataAdapter sda = new SqlDataAdapter(query, conn);
                 DataTable dtable = new DataTable();
                 sda.Fill(dtable);
 
@@ -47,10 +47,10 @@ namespace InventoryMgmtSoftware
                 {
                     username = UserName.Text;
                     password = UserPassword.Text;
-                    ProductForm log = new ProductForm();
+                    AttendantForm log = new AttendantForm();
                     this.Hide();
                     log.Show();
-                }
+                } else
                 {
                     MessageBox.Show("Invalid user credentials");
                     UserName.Text = "";
@@ -63,6 +63,13 @@ namespace InventoryMgmtSoftware
             {
                 conn.Close();
             }
+        }
+
+        private void Signup_Click(object sender, EventArgs e)
+        {
+            SignupForm log = new SignupForm();
+            this.Hide();
+            log.Show();
         }
     }
 }

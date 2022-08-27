@@ -46,9 +46,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.MidnightBlue;
-            this.panel1.Location = new System.Drawing.Point(202, 12);
+            this.panel1.Location = new System.Drawing.Point(216, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1236, 702);
+            this.panel1.Size = new System.Drawing.Size(1222, 702);
             this.panel1.TabIndex = 0;
             // 
             // button1
@@ -62,6 +62,7 @@
             this.button1.TabIndex = 11;
             this.button1.Text = "Till";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -92,11 +93,11 @@
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("JetBrains Mono SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(68, 260);
+            this.button4.Location = new System.Drawing.Point(66, 260);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(130, 40);
+            this.button4.Size = new System.Drawing.Size(144, 40);
             this.button4.TabIndex = 14;
-            this.button4.Text = "Transaction";
+            this.button4.Text = "Transactions";
             this.button4.UseVisualStyleBackColor = true;
             // 
             // pictureBox4
@@ -142,7 +143,7 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // Form4
+            // AttendantForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -158,7 +159,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form4";
+            this.Name = "AttendantForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form4";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
