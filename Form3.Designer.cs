@@ -28,10 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button10 = new System.Windows.Forms.Button();
             this.Prod = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ProdData = new System.Windows.Forms.DataGridView();
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
@@ -47,20 +51,20 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.Dashboard = new System.Windows.Forms.Button();
+            this.Products = new System.Windows.Forms.Button();
+            this.Categories = new System.Windows.Forms.Button();
+            this.Users = new System.Windows.Forms.Button();
+            this.Stock = new System.Windows.Forms.Button();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button11 = new System.Windows.Forms.Button();
+            this.Report = new System.Windows.Forms.Button();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProdData)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -75,7 +79,7 @@
             this.panel1.BackColor = System.Drawing.Color.MidnightBlue;
             this.panel1.Controls.Add(this.button10);
             this.panel1.Controls.Add(this.Prod);
-            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.ProdData);
             this.panel1.Controls.Add(this.button9);
             this.panel1.Controls.Add(this.button8);
             this.panel1.Controls.Add(this.button7);
@@ -103,7 +107,7 @@
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button10.Font = new System.Drawing.Font("JetBrains Mono SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button10.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.button10.Location = new System.Drawing.Point(881, 36);
+            this.button10.Location = new System.Drawing.Point(853, 34);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(100, 30);
             this.button10.TabIndex = 22;
@@ -121,22 +125,59 @@
             "Health & Beauty",
             "Electronics",
             "Furniture"});
-            this.Prod.Location = new System.Drawing.Point(570, 36);
+            this.Prod.Location = new System.Drawing.Point(542, 34);
             this.Prod.Name = "Prod";
             this.Prod.Size = new System.Drawing.Size(305, 30);
             this.Prod.TabIndex = 21;
             this.Prod.Text = "Filter by category";
             // 
-            // dataGridView1
+            // ProdData
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(570, 72);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(646, 612);
-            this.dataGridView1.TabIndex = 20;
+            this.ProdData.AllowUserToAddRows = false;
+            this.ProdData.AllowUserToDeleteRows = false;
+            this.ProdData.AllowUserToResizeColumns = false;
+            this.ProdData.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("JetBrains Mono", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ProdData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.ProdData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("JetBrains Mono", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.ProdData.DefaultCellStyle = dataGridViewCellStyle2;
+            this.ProdData.Location = new System.Drawing.Point(542, 69);
+            this.ProdData.Name = "ProdData";
+            this.ProdData.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("JetBrains Mono SemiBold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ProdData.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.ProdData.RowHeadersWidth = 20;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("JetBrains Mono", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.MidnightBlue;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            this.ProdData.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.ProdData.RowTemplate.Height = 24;
+            this.ProdData.RowTemplate.ReadOnly = true;
+            this.ProdData.Size = new System.Drawing.Size(691, 630);
+            this.ProdData.TabIndex = 20;
+            this.ProdData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ProdData_CellContentClick);
             // 
             // button9
             // 
@@ -165,6 +206,7 @@
             this.button8.TabIndex = 18;
             this.button8.Text = "Delete";
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button7
             // 
@@ -358,70 +400,70 @@
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
-            // button1
+            // Dashboard
             // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("JetBrains Mono SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(66, 84);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(130, 40);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Dashboard";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.Dashboard.FlatAppearance.BorderSize = 0;
+            this.Dashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Dashboard.Font = new System.Drawing.Font("JetBrains Mono SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Dashboard.Location = new System.Drawing.Point(66, 84);
+            this.Dashboard.Name = "Dashboard";
+            this.Dashboard.Size = new System.Drawing.Size(130, 40);
+            this.Dashboard.TabIndex = 0;
+            this.Dashboard.Text = "Dashboard";
+            this.Dashboard.UseVisualStyleBackColor = true;
+            this.Dashboard.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // Products
             // 
-            this.button2.BackColor = System.Drawing.Color.MidnightBlue;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("JetBrains Mono SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(66, 197);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(130, 40);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Products";
-            this.button2.UseVisualStyleBackColor = false;
+            this.Products.BackColor = System.Drawing.Color.MidnightBlue;
+            this.Products.FlatAppearance.BorderSize = 0;
+            this.Products.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Products.Font = new System.Drawing.Font("JetBrains Mono SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Products.ForeColor = System.Drawing.Color.White;
+            this.Products.Location = new System.Drawing.Point(66, 197);
+            this.Products.Name = "Products";
+            this.Products.Size = new System.Drawing.Size(130, 40);
+            this.Products.TabIndex = 1;
+            this.Products.Text = "Products";
+            this.Products.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // Categories
             // 
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("JetBrains Mono SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(66, 310);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(130, 40);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Categories";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.Categories.FlatAppearance.BorderSize = 0;
+            this.Categories.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Categories.Font = new System.Drawing.Font("JetBrains Mono SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Categories.Location = new System.Drawing.Point(66, 310);
+            this.Categories.Name = "Categories";
+            this.Categories.Size = new System.Drawing.Size(130, 40);
+            this.Categories.TabIndex = 2;
+            this.Categories.Text = "Categories";
+            this.Categories.UseVisualStyleBackColor = true;
+            this.Categories.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button4
+            // Users
             // 
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("JetBrains Mono SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(66, 649);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(130, 40);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Users";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.Users.FlatAppearance.BorderSize = 0;
+            this.Users.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Users.Font = new System.Drawing.Font("JetBrains Mono SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Users.Location = new System.Drawing.Point(66, 649);
+            this.Users.Name = "Users";
+            this.Users.Size = new System.Drawing.Size(130, 40);
+            this.Users.TabIndex = 3;
+            this.Users.Text = "Users";
+            this.Users.UseVisualStyleBackColor = true;
+            this.Users.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button5
+            // Stock
             // 
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("JetBrains Mono SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(66, 423);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(130, 40);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Stock";
-            this.button5.UseVisualStyleBackColor = true;
+            this.Stock.FlatAppearance.BorderSize = 0;
+            this.Stock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Stock.Font = new System.Drawing.Font("JetBrains Mono SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Stock.Location = new System.Drawing.Point(66, 423);
+            this.Stock.Name = "Stock";
+            this.Stock.Size = new System.Drawing.Size(130, 40);
+            this.Stock.TabIndex = 4;
+            this.Stock.Text = "Stock";
+            this.Stock.UseVisualStyleBackColor = true;
             // 
             // pictureBox5
             // 
@@ -474,17 +516,17 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // button11
+            // Report
             // 
-            this.button11.FlatAppearance.BorderSize = 0;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Font = new System.Drawing.Font("JetBrains Mono SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.Location = new System.Drawing.Point(68, 536);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(130, 40);
-            this.button11.TabIndex = 14;
-            this.button11.Text = "Report";
-            this.button11.UseVisualStyleBackColor = true;
+            this.Report.FlatAppearance.BorderSize = 0;
+            this.Report.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Report.Font = new System.Drawing.Font("JetBrains Mono SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Report.Location = new System.Drawing.Point(68, 536);
+            this.Report.Name = "Report";
+            this.Report.Size = new System.Drawing.Size(130, 40);
+            this.Report.TabIndex = 14;
+            this.Report.Text = "Report";
+            this.Report.UseVisualStyleBackColor = true;
             // 
             // pictureBox7
             // 
@@ -502,18 +544,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1450, 730);
-            this.Controls.Add(this.button11);
+            this.Controls.Add(this.Report);
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Stock);
+            this.Controls.Add(this.Users);
+            this.Controls.Add(this.Categories);
+            this.Controls.Add(this.Products);
+            this.Controls.Add(this.Dashboard);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form3";
@@ -522,7 +564,7 @@
             this.Load += new System.EventHandler(this.Form3_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProdData)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -538,11 +580,11 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button Dashboard;
+        private System.Windows.Forms.Button Products;
+        private System.Windows.Forms.Button Categories;
+        private System.Windows.Forms.Button Users;
+        private System.Windows.Forms.Button Stock;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
@@ -562,9 +604,9 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.ComboBox ProdCategory;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView ProdData;
         private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button Report;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.ComboBox Prod;
     }

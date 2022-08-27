@@ -35,6 +35,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bunifuMaterialTextbox1 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuMaterialTextbox2 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.button6 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -136,11 +137,27 @@
             this.bunifuMaterialTextbox2.TabIndex = 6;
             this.bunifuMaterialTextbox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.Red;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("JetBrains Mono SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.Color.White;
+            this.button6.Location = new System.Drawing.Point(859, 0);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(40, 40);
+            this.button6.TabIndex = 7;
+            this.button6.Text = "x";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
             // Form2
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.MidnightBlue;
             this.ClientSize = new System.Drawing.Size(900, 500);
+            this.Controls.Add(this.button6);
             this.Controls.Add(this.bunifuMaterialTextbox2);
             this.Controls.Add(this.bunifuMaterialTextbox1);
             this.Controls.Add(this.pictureBox3);
@@ -169,5 +186,6 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox1;
         private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox2;
+        private System.Windows.Forms.Button button6;
     }
 }

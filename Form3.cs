@@ -23,11 +23,6 @@ namespace InventoryMgmtSoftware
             Application.Exit();
         }
 
-        private void Form3_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
 
@@ -50,22 +45,25 @@ namespace InventoryMgmtSoftware
 
         private void button7_Click(object sender, EventArgs e)
         {
-            string server = "localhost";
-            string db = "ims_db";
-            string port = "3307";
-            string username = "root";
-            string password = "";
-            string dbRef = "SERVER=" + server + ";" + "PORT=" + port + ";" + "DATABASE=" + db + ";" + "UID=" + username + ";" + "PASSWORD=" + password + ";";
-            MySqlConnection conn = new MySqlConnection(dbRef);
-            conn.Open();
-            string query = "INSERT INTO products(ProdName, ProdPrice, ProdQty, ProdCategory) VALUES (@name, @price, @qty, @category)";
-            MySqlCommand cmd = new MySqlCommand(query, conn);
-            cmd.Parameters.AddWithValue("@name", ProdName.Text);
-            cmd.Parameters.AddWithValue("@price", ProdPrice.Text);
-            cmd.Parameters.AddWithValue("@qty", ProdQty.Text);
-            cmd.Parameters.AddWithValue("@category", ProdCategory.Text);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Product added successfully");
+            
+        }
+
+        private void addProductData()
+        {
+            
+        }
+        private void Form3_Load(object sender, EventArgs e)
+        {
+            addProductData();
+        }
+
+        private void ProdData_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
         }
     }
 }
