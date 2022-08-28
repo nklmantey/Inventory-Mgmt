@@ -29,7 +29,6 @@ namespace InventoryMgmtSoftware
         }
         private void TransactionsForm_Load(object sender, EventArgs e)
         {
-            
         }
         private void Till_Click(object sender, EventArgs e)
         {
@@ -42,6 +41,7 @@ namespace InventoryMgmtSoftware
         {
             Date.Text = DateTime.Today.Day.ToString() + "/" + DateTime.Today.Month.ToString() + "/" + DateTime.Today.Year.ToString();
         }
+
         int OverallSum = 0;
         private void button7_Click(object sender, EventArgs e)
         {            
@@ -99,6 +99,20 @@ namespace InventoryMgmtSoftware
         private void button8_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            StockForm st = new StockForm();
+            this.Hide();
+            st.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ReportForm rf = new ReportForm();
+            this.Hide();
+            rf.Show();
         }
     }
 }

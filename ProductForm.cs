@@ -166,5 +166,17 @@ namespace InventoryMgmtSoftware
             this.Hide();
             log.Show();
         }
+
+        private void Report_Click(object sender, EventArgs e)
+        {
+            ReportForm log = new ReportForm();
+            this.Hide();
+            log.Show();
+        }
+
+        private void ProdCategory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
