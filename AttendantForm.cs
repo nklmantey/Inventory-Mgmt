@@ -77,6 +77,11 @@ namespace InventoryMgmtSoftware
             tf.Show();
         }
 
+        private void Result_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void AttendantForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             timer.Stop();

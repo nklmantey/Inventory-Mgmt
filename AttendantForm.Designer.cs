@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Close = new System.Windows.Forms.Button();
+            this.Open = new System.Windows.Forms.Button();
+            this.Result = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -38,9 +41,6 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Result = new System.Windows.Forms.Label();
-            this.Open = new System.Windows.Forms.Button();
-            this.Close = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -59,6 +59,49 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1236, 702);
             this.panel1.TabIndex = 2;
+            // 
+            // Close
+            // 
+            this.Close.BackColor = System.Drawing.Color.White;
+            this.Close.FlatAppearance.BorderSize = 0;
+            this.Close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Close.Font = new System.Drawing.Font("JetBrains Mono SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Close.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.Close.Location = new System.Drawing.Point(561, 324);
+            this.Close.Name = "Close";
+            this.Close.Size = new System.Drawing.Size(100, 40);
+            this.Close.TabIndex = 23;
+            this.Close.Text = "Close";
+            this.Close.UseVisualStyleBackColor = false;
+            this.Close.Click += new System.EventHandler(this.Close_Click);
+            // 
+            // Open
+            // 
+            this.Open.BackColor = System.Drawing.Color.White;
+            this.Open.FlatAppearance.BorderSize = 0;
+            this.Open.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Open.Font = new System.Drawing.Font("JetBrains Mono SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Open.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.Open.Location = new System.Drawing.Point(375, 324);
+            this.Open.Name = "Open";
+            this.Open.Size = new System.Drawing.Size(100, 40);
+            this.Open.TabIndex = 22;
+            this.Open.Text = "Open";
+            this.Open.UseVisualStyleBackColor = false;
+            this.Open.Click += new System.EventHandler(this.Open_Click);
+            // 
+            // Result
+            // 
+            this.Result.AutoSize = true;
+            this.Result.Font = new System.Drawing.Font("JetBrains Mono SemiBold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Result.ForeColor = System.Drawing.Color.White;
+            this.Result.Location = new System.Drawing.Point(419, 217);
+            this.Result.Name = "Result";
+            this.Result.Size = new System.Drawing.Size(153, 37);
+            this.Result.TabIndex = 21;
+            this.Result.Text = "00:00:00";
+            this.Result.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Result.Click += new System.EventHandler(this.Result_Click);
             // 
             // button6
             // 
@@ -170,48 +213,6 @@
             this.pictureBox1.TabIndex = 23;
             this.pictureBox1.TabStop = false;
             // 
-            // Result
-            // 
-            this.Result.AutoSize = true;
-            this.Result.Font = new System.Drawing.Font("JetBrains Mono SemiBold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Result.ForeColor = System.Drawing.Color.White;
-            this.Result.Location = new System.Drawing.Point(419, 217);
-            this.Result.Name = "Result";
-            this.Result.Size = new System.Drawing.Size(153, 37);
-            this.Result.TabIndex = 21;
-            this.Result.Text = "00:00:00";
-            this.Result.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // Open
-            // 
-            this.Open.BackColor = System.Drawing.Color.White;
-            this.Open.FlatAppearance.BorderSize = 0;
-            this.Open.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Open.Font = new System.Drawing.Font("JetBrains Mono SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Open.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.Open.Location = new System.Drawing.Point(375, 324);
-            this.Open.Name = "Open";
-            this.Open.Size = new System.Drawing.Size(100, 40);
-            this.Open.TabIndex = 22;
-            this.Open.Text = "Open";
-            this.Open.UseVisualStyleBackColor = false;
-            this.Open.Click += new System.EventHandler(this.Open_Click);
-            // 
-            // Close
-            // 
-            this.Close.BackColor = System.Drawing.Color.White;
-            this.Close.FlatAppearance.BorderSize = 0;
-            this.Close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Close.Font = new System.Drawing.Font("JetBrains Mono SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Close.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.Close.Location = new System.Drawing.Point(561, 324);
-            this.Close.Name = "Close";
-            this.Close.Size = new System.Drawing.Size(100, 40);
-            this.Close.TabIndex = 23;
-            this.Close.Text = "Close";
-            this.Close.UseVisualStyleBackColor = false;
-            this.Close.Click += new System.EventHandler(this.Close_Click);
-            // 
             // AttendantForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -229,6 +230,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AttendantForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AttendantForm";
             this.Load += new System.EventHandler(this.AttendantForm_Load);
             this.panel1.ResumeLayout(false);
