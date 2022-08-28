@@ -13,7 +13,7 @@ namespace InventoryMgmtSoftware
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TransactionsForm());
+            Application.Run(new Splash());
         }
     }
 }

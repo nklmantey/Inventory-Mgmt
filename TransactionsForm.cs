@@ -114,5 +114,22 @@ namespace InventoryMgmtSoftware
             this.Hide();
             rf.Show();
         }
+
+        private void Print_Click(object sender, EventArgs e)
+        {
+            if (printPreviewDialog1.ShowDialog() == DialogResult.OK)
+            {
+                printDocument1.Print();
+            }
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            e.Graphics.DrawString("Shoprite Inventory System", new Font("JetBrains Mono", 25, FontStyle.Bold), Brushes.Red, new Point(Top));
+            e.Graphics.DrawString("Receipt ID: " + OrderData.SelectedRows[0].Cells[0].Value.ToString(), new Font("JetBrains Mono", 15, FontStyle.Bold), Brushes.Black, new Point(30, 70));
+            e.Graphics.DrawString("Attendant Name: " + OrderData.SelectedRows[0].Cells[1].Value.ToString(), new Font("JetBrains Mono", 15, FontStyle.Bold), Brushes.Black, new Point(30, 100));
+            e.Graphics.DrawString("Date: " + OrderData.SelectedRows[0].Cells[2].Value.ToString(), new Font("JetBrains Mono", 15, FontStyle.Bold), Brushes.Black, new Point(30, 130));
+            e.Graphics.DrawString("Total: " + OrderData.SelectedRows[0].Cells[3].Value.ToString() + " cedis", new Font("JetBrains Mono", 15, FontStyle.Bold), Brushes.Black, new Point(30, 160));
+        }
     }
 }
