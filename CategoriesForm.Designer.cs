@@ -342,6 +342,7 @@
             this.Report.TabIndex = 26;
             this.Report.Text = "Report";
             this.Report.UseVisualStyleBackColor = true;
+            this.Report.Click += new System.EventHandler(this.Report_Click);
             // 
             // Stock
             // 

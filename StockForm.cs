@@ -34,7 +34,9 @@ namespace InventoryMgmtSoftware
 
         private void Report_Click(object sender, EventArgs e)
         {
-
+            ReportForm log = new ReportForm();
+            this.Hide();
+            log.Show();
         }
 
         private void Users_Click(object sender, EventArgs e)
@@ -70,6 +72,11 @@ namespace InventoryMgmtSoftware
         private void button6_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            getData();
         }
     }
 }

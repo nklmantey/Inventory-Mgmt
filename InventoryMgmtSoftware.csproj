@@ -95,6 +95,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AttendantForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendantForm.Designer.cs">
+      <DependentUpon>AttendantForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReportForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,12 +124,6 @@
     </Compile>
     <Compile Include="ProductForm.Designer.cs">
       <DependentUpon>ProductForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AttendantForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AttendantForm.Designer.cs">
-      <DependentUpon>AttendantForm.cs</DependentUpon>
     </Compile>
     <Compile Include="CategoriesForm.cs">
       <SubType>Form</SubType>
@@ -157,6 +157,9 @@
     <Compile Include="UserForm.Designer.cs">
       <DependentUpon>UserForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AttendantForm.resx">
+      <DependentUpon>AttendantForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ReportForm.resx">
       <DependentUpon>ReportForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -168,9 +171,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ProductForm.resx">
       <DependentUpon>ProductForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AttendantForm.resx">
-      <DependentUpon>AttendantForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CategoriesForm.resx">
       <DependentUpon>CategoriesForm.cs</DependentUpon>
@@ -261,6 +261,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\lending.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\packages.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

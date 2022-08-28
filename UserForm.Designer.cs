@@ -77,6 +77,7 @@
             this.Report.TabIndex = 24;
             this.Report.Text = "Report";
             this.Report.UseVisualStyleBackColor = true;
+            this.Report.Click += new System.EventHandler(this.Report_Click);
             // 
             // Stock
             // 
@@ -222,6 +223,7 @@
             this.button10.TabIndex = 22;
             this.button10.Text = "Refresh";
             this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button9
             // 
