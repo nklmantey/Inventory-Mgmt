@@ -33,8 +33,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.ProdData = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.button10 = new System.Windows.Forms.Button();
-            this.Prod = new System.Windows.Forms.ComboBox();
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
@@ -47,35 +45,33 @@
             this.label3 = new System.Windows.Forms.Label();
             this.ProdID = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
             this.Products = new System.Windows.Forms.Button();
             this.Categories = new System.Windows.Forms.Button();
             this.Users = new System.Windows.Forms.Button();
             this.Stock = new System.Windows.Forms.Button();
+            this.Report = new System.Windows.Forms.Button();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.Report = new System.Windows.Forms.Button();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProdData)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.MidnightBlue;
             this.panel1.Controls.Add(this.ProdData);
-            this.panel1.Controls.Add(this.button10);
-            this.panel1.Controls.Add(this.Prod);
             this.panel1.Controls.Add(this.button9);
             this.panel1.Controls.Add(this.button8);
             this.panel1.Controls.Add(this.button7);
@@ -119,12 +115,12 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.ProdData.DefaultCellStyle = dataGridViewCellStyle3;
             this.ProdData.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.ProdData.Location = new System.Drawing.Point(542, 70);
+            this.ProdData.Location = new System.Drawing.Point(542, 49);
             this.ProdData.Name = "ProdData";
             this.ProdData.RowHeadersVisible = false;
             this.ProdData.RowHeadersWidth = 51;
             this.ProdData.RowTemplate.Height = 30;
-            this.ProdData.Size = new System.Drawing.Size(691, 629);
+            this.ProdData.Size = new System.Drawing.Size(691, 650);
             this.ProdData.TabIndex = 23;
             this.ProdData.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.ProdData.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -148,37 +144,6 @@
             this.ProdData.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.ProdData.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.ProdData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ProdData_CellContentClick);
-            // 
-            // button10
-            // 
-            this.button10.BackColor = System.Drawing.Color.White;
-            this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Font = new System.Drawing.Font("JetBrains Mono SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.button10.Location = new System.Drawing.Point(853, 34);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(100, 30);
-            this.button10.TabIndex = 22;
-            this.button10.Text = "Refresh";
-            this.button10.UseVisualStyleBackColor = false;
-            // 
-            // Prod
-            // 
-            this.Prod.Font = new System.Drawing.Font("JetBrains Mono", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Prod.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.Prod.FormattingEnabled = true;
-            this.Prod.Items.AddRange(new object[] {
-            "Meat",
-            "Food & Beverage",
-            "Health & Beauty",
-            "Electronics",
-            "Furniture"});
-            this.Prod.Location = new System.Drawing.Point(542, 34);
-            this.Prod.Name = "Prod";
-            this.Prod.Size = new System.Drawing.Size(305, 30);
-            this.Prod.TabIndex = 21;
-            this.Prod.Text = "Filter by category";
             // 
             // button9
             // 
@@ -366,16 +331,6 @@
             this.label2.TabIndex = 8;
             this.label2.Text = "ID";
             // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::InventoryMgmtSoftware.Properties.Resources.dairy_products;
-            this.pictureBox6.Location = new System.Drawing.Point(79, 72);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(100, 100);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 7;
-            this.pictureBox6.TabStop = false;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -455,6 +410,28 @@
             this.Stock.UseVisualStyleBackColor = true;
             this.Stock.Click += new System.EventHandler(this.Stock_Click);
             // 
+            // Report
+            // 
+            this.Report.FlatAppearance.BorderSize = 0;
+            this.Report.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Report.Font = new System.Drawing.Font("JetBrains Mono SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Report.Location = new System.Drawing.Point(68, 465);
+            this.Report.Name = "Report";
+            this.Report.Size = new System.Drawing.Size(130, 40);
+            this.Report.TabIndex = 14;
+            this.Report.Text = "Report";
+            this.Report.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::InventoryMgmtSoftware.Properties.Resources.report;
+            this.pictureBox7.Location = new System.Drawing.Point(12, 455);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 13;
+            this.pictureBox7.TabStop = false;
+            // 
             // pictureBox5
             // 
             this.pictureBox5.Image = global::InventoryMgmtSoftware.Properties.Resources.user1;
@@ -495,27 +472,15 @@
             this.pictureBox2.TabIndex = 7;
             this.pictureBox2.TabStop = false;
             // 
-            // Report
+            // pictureBox6
             // 
-            this.Report.FlatAppearance.BorderSize = 0;
-            this.Report.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Report.Font = new System.Drawing.Font("JetBrains Mono SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Report.Location = new System.Drawing.Point(68, 465);
-            this.Report.Name = "Report";
-            this.Report.Size = new System.Drawing.Size(130, 40);
-            this.Report.TabIndex = 14;
-            this.Report.Text = "Report";
-            this.Report.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = global::InventoryMgmtSoftware.Properties.Resources.report;
-            this.pictureBox7.Location = new System.Drawing.Point(12, 455);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 13;
-            this.pictureBox7.TabStop = false;
+            this.pictureBox6.Image = global::InventoryMgmtSoftware.Properties.Resources.dairy_products;
+            this.pictureBox6.Location = new System.Drawing.Point(79, 72);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(100, 100);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 7;
+            this.pictureBox6.TabStop = false;
             // 
             // ProductForm
             // 
@@ -542,12 +507,12 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProdData)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -578,10 +543,8 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.ComboBox ProdCategory;
-        private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button Report;
         private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.ComboBox Prod;
         private Guna.UI2.WinForms.Guna2DataGridView ProdData;
     }
 }

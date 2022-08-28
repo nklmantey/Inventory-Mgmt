@@ -95,6 +95,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AttStockForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttStockForm.Designer.cs">
+      <DependentUpon>AttStockForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForm.Designer.cs">
+      <DependentUpon>ReportForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Splash.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +163,9 @@
     <Compile Include="UserForm.Designer.cs">
       <DependentUpon>UserForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AttStockForm.resx">
+      <DependentUpon>AttStockForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Splash.resx">
       <DependentUpon>Splash.cs</DependentUpon>
     </EmbeddedResource>
@@ -249,6 +264,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lending.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

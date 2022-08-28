@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AttendantForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
             this.Result = new System.Windows.Forms.TextBox();
@@ -40,8 +39,6 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Open = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.Close = new Bunifu.Framework.UI.BunifuThinButton2();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -52,8 +49,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.MidnightBlue;
-            this.panel1.Controls.Add(this.Close);
-            this.panel1.Controls.Add(this.Open);
             this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.Result);
             this.panel1.Location = new System.Drawing.Point(216, 12);
@@ -86,6 +81,7 @@
             this.Result.TabIndex = 19;
             this.Result.Text = " 00:00:00";
             this.Result.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Result.TextChanged += new System.EventHandler(this.Result_TextChanged);
             // 
             // Till
             // 
@@ -113,6 +109,7 @@
             this.button2.TabIndex = 12;
             this.button2.Text = "Report";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -125,6 +122,7 @@
             this.button3.TabIndex = 13;
             this.button3.Text = "Stock";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -182,58 +180,6 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // Open
-            // 
-            this.Open.ActiveBorderThickness = 1;
-            this.Open.ActiveCornerRadius = 20;
-            this.Open.ActiveFillColor = System.Drawing.Color.DodgerBlue;
-            this.Open.ActiveForecolor = System.Drawing.Color.White;
-            this.Open.ActiveLineColor = System.Drawing.Color.DodgerBlue;
-            this.Open.BackColor = System.Drawing.Color.MidnightBlue;
-            this.Open.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Open.BackgroundImage")));
-            this.Open.ButtonText = "Open Till";
-            this.Open.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Open.Font = new System.Drawing.Font("JetBrains Mono SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Open.ForeColor = System.Drawing.Color.White;
-            this.Open.IdleBorderThickness = 1;
-            this.Open.IdleCornerRadius = 20;
-            this.Open.IdleFillColor = System.Drawing.Color.White;
-            this.Open.IdleForecolor = System.Drawing.Color.MidnightBlue;
-            this.Open.IdleLineColor = System.Drawing.Color.White;
-            this.Open.Location = new System.Drawing.Point(373, 353);
-            this.Open.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.Open.Name = "Open";
-            this.Open.Size = new System.Drawing.Size(150, 66);
-            this.Open.TabIndex = 21;
-            this.Open.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Open.Click += new System.EventHandler(this.Open_Click_1);
-            // 
-            // Close
-            // 
-            this.Close.ActiveBorderThickness = 1;
-            this.Close.ActiveCornerRadius = 20;
-            this.Close.ActiveFillColor = System.Drawing.Color.DodgerBlue;
-            this.Close.ActiveForecolor = System.Drawing.Color.White;
-            this.Close.ActiveLineColor = System.Drawing.Color.DodgerBlue;
-            this.Close.BackColor = System.Drawing.Color.MidnightBlue;
-            this.Close.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Close.BackgroundImage")));
-            this.Close.ButtonText = "Close Till";
-            this.Close.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Close.Font = new System.Drawing.Font("JetBrains Mono SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Close.ForeColor = System.Drawing.Color.White;
-            this.Close.IdleBorderThickness = 1;
-            this.Close.IdleCornerRadius = 20;
-            this.Close.IdleFillColor = System.Drawing.Color.White;
-            this.Close.IdleForecolor = System.Drawing.Color.MidnightBlue;
-            this.Close.IdleLineColor = System.Drawing.Color.White;
-            this.Close.Location = new System.Drawing.Point(534, 353);
-            this.Close.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.Close.Name = "Close";
-            this.Close.Size = new System.Drawing.Size(150, 66);
-            this.Close.TabIndex = 22;
-            this.Close.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Close.Click += new System.EventHandler(this.Close_Click_1);
-            // 
             // AttendantForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -276,7 +222,5 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.TextBox Result;
-        private Bunifu.Framework.UI.BunifuThinButton2 Open;
-        private Bunifu.Framework.UI.BunifuThinButton2 Close;
     }
 }

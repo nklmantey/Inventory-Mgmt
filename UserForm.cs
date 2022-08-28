@@ -136,5 +136,15 @@ namespace InventoryMgmtSoftware
             this.Hide();
             log.Show();
         }
+
+        private void UserName_OnValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Users_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
